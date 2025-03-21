@@ -1348,3 +1348,59 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
+.butterfly {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  animation: fly 6s infinite ease-in-out;
+}
+
+/* Cuerpo de la mariposa */
+.butterfly .body {
+  position: absolute;
+  width: 6px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Alas de la mariposa */
+.butterfly .wing {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: radial-gradient(circle, #3498db, #1e3799);
+  border-radius: 50%;
+}
+
+.butterfly .wing.left {
+  left: -15px;
+  top: 0;
+  transform: rotate(-20deg);
+}
+
+.butterfly .wing.right {
+  right: -15px;
+  top: 0;
+  transform: rotate(20deg);
+}
+
+/* Animación para dar efecto de vuelo */
+@keyframes fly {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+
+.butterfly:nth-child(1) { left: 40%; top: 35%; animation-duration: 5s; }
+.butterfly:nth-child(2) { left: 55%; top: 30%; animation-duration: 6s; }
+.butterfly:nth-child(3) { left: 50%; top: 45%; animation-duration: 5.5s; }
+.butterfly:nth-child(4) { left: 35%; top: 50%; animation-duration: 7s; }
+.butterfly:nth-child(5) { left: 60%; top: 42%; animation-duration: 6.5s; }
+.butterfly:nth-child(6) { left: 42%; top: 40%; animation-duration: 6s; }
+.butterfly:nth-child(7) { left: 58%; top: 38%; animation-duration: 5s; }
